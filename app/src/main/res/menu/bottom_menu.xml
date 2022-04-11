@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/menu_firebase"
-        android:title="Firebase"
+        android:title="Voters"
         android:icon="@drawable/ic_baseline_how_to_vote_24"/>
 
 </menu>

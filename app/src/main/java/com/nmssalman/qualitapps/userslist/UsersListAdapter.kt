@@ -26,7 +26,6 @@ class UsersListAdapter(private var users: List<User>): RecyclerView.Adapter<User
     }
 
     fun updateUsers(users: List<User>){
-        Log.i("UpdatingValues", users.count().toString())
         this.users = users
     }
     class ViewHolder(val binding: ItemUsersListBinding) : RecyclerView.ViewHolder(binding.root) {

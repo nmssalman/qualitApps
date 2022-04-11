@@ -26,14 +26,11 @@ class UsersRepository(val applicationContext: Context, val moshi: Moshi): MyRepo
     private inner class GetUsersListApiTask: VolleyTaskListener{
         override fun onFinished() {
             val URL = URLHelper.USERS
-            Log.i("UserList", URL)
-
             val jsonArrayRequest = object : MyJsonArrayRequest(Method.GET, URL, null, Response.Listener {
-               Log.i("UserList", it.toString())
                 val type = Types.newParameterizedType(List::class.java, User::class.java)
-
                 val usersList = moshi.adapter<List<User>>(type).fromJson(it.toString())
-                _getUsersSuccess.postValue(usersList)
+                if(usersList != null)
+                    _getUsersSuccess.postValue(usersList!!)
             }, MyVolleyError(getUsersListApiTask), applicationContext){}
             MyApplication.instance?.addToRequestQueue(jsonArrayRequest)
         }

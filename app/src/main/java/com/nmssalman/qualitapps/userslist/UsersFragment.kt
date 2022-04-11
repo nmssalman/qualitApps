@@ -14,6 +14,7 @@ import com.nmssalman.qualitapps.databinding.FragmentUsersBinding
 import com.nmssalman.qualitapps.userslist.UsersListAdapter
 import com.nmssalman.qualitapps.userslist.UsersViewModel
 import com.nmssalman.qualitapps.*
+import com.nmssalman.qualitapps.Utilities.DialogBuilder
 
 class UsersFragment : Fragment() {
     lateinit var viewModel: UsersViewModel
@@ -46,9 +47,12 @@ class UsersFragment : Fragment() {
             Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         })
         viewModel.getUserSuccess.observe(viewLifecycleOwner, Observer {
-            Log.i("AdapterCount", it.count().toString())
-            adapterUsers.updateUsers(it)
-            adapterUsers.notifyDataSetChanged()
+            if(it.count()>0) {
+                adapterUsers.updateUsers(it)
+                adapterUsers.notifyDataSetChanged()
+            }
+            else
+                DialogBuilder.dialogBuilder(utils.getString(R.string.error_no_users_found), requireContext()).show()
         })
     }
 

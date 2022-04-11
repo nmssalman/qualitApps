@@ -23,7 +23,6 @@ class VotingFragment : Fragment(), FirebaseDatabase.FirebaseListener, VotingList
     private lateinit var utils: Utils
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var binding: FragmentVotingBinding
-    private val users = ArrayList<String>()
     private lateinit var adapterList: VotingListAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,7 +33,6 @@ class VotingFragment : Fragment(), FirebaseDatabase.FirebaseListener, VotingList
         adapterList = VotingListAdapter(listOf(), this)
         initAdapter()
         utils.setTitleBar(utils.getString(R.string.user_list))
-
         firebaseDatabase.getData()
 
     }
@@ -89,18 +87,11 @@ class VotingFragment : Fragment(), FirebaseDatabase.FirebaseListener, VotingList
     fun addVoter(){
         val builder: AlertDialog.Builder = android.app.AlertDialog.Builder(requireContext())
         builder.setTitle("Enter Voter Name")
-
-// Set up the input
         val input = EditText(requireContext())
-// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
         input.setHint("Voter Name")
         input.inputType = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
         builder.setView(input)
-
-// Set up the buttons
         builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
-            // Here you get get input text from the Edittext
-            var m_Text = input.text.toString()
             firebaseDatabase.addVoter(input.text.toString(), 0)
             addVoter()
         })

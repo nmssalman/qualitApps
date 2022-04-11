@@ -22,5 +22,8 @@
     <!--    Message Dialogs-->
     <string name="message_ok">OK</string>
 
+    <!--    Error Messages-->
+    <string name="error_no_users_found">No Users found!</string>
+
 
 </resources>
