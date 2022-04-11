@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="normalBlackText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="titleBlackTextBold">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:autoSizeMaxTextSize">15dp</item>
+        <item name="android:autoSizeMinTextSize">10dp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="maxLines">1</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

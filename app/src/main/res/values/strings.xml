@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">QualitApps</string>
+
+    <!--    Test Values-->
+    <string name="test_name">Test Name</string>
+    <string name="test_email">test@test.com</string>
+    <string name="test_phone">1-000-000-0000 x0000</string>
+    <string name="test_address">000, Test Unit, Test Street, Test City</string>
+    <string name="test_free_text">Free Text 01</string>
+
+    <!--    Titles User List-->
+    <string name="title_address">Address</string>
+    <string name="title_camera">Camera</string>
+
+    <!--    Titles Voters-->
+    <string name="title_voter_name">Name : </string>
+    <string name="title_vote">Vote : </string>
+
+    <!--    Page Names-->
+    <string name="user_list">User List</string>
+
+    <!--    Message Dialogs-->
+    <string name="message_ok">OK</string>
+
+
+</resources>

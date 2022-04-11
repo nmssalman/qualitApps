@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550118469992",
+    "project_id": "votingtest-7c0b1",
+    "storage_bucket": "votingtest-7c0b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550118469992:android:07c4f76928822616dfe6dd",
+        "android_client_info": {
+          "package_name": "com.nmssalman.qualitapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550118469992-6hb5d48j2vcahcfa2d5kmi30q593mat7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHwMNTBmwxzMcknX65vrvhBlOfiLE34A0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550118469992-6hb5d48j2vcahcfa2d5kmi30q593mat7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
